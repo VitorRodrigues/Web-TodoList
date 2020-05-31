@@ -1,0 +1,63 @@
+/* Prevent the text contents of draggable elements from being selectable. */
+
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+body {
+    background-color: rgb(209, 171, 224);
+}
+
+.board-layout {
+    display: grid;
+    grid-template-rows: max-content auto;
+    gap: 16px;
+    padding: 8px;
+}
+
+.columns-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    gap: 16px;
+    min-height: 600px;
+}
+
+.column {
+    background-color: #eee;
+    width: 200px;
+    height: max-content;
+    min-height: 600px;
+    border: 1px solid #333;
+    padding: 0;
+}
+
+.column header {
+    color: #fff;
+    background-color: darkslategrey;
+    padding: 5px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, .25);
+    padding: 10px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.dragging {
+    background: yellow;
+}
+
+.dropover {
+    animation: ease-in;
+    background-color: lightgreen;
+}

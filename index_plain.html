@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <title>Personal Board</title>
+  </head>
+  <body>
+    <h1>Board de tarefas</h1>
+    <!-- <button class="btn btn-primary" aria-label="Adicionar tarefa">+</button> -->
+    <div id="board" class="board-layout">
+        <div class="columns-list">
+            <div id="todo" class="column"
+            ondrop="dropIt(event)"
+            ondragover="allowDrop(event)"
+            ondragenter="dragEnter(event)"
+            ondragleave="dragExit(event)">
+                <header class="header">To do</header>
+                <div id="card1" class="card" draggable="true" ondragstart="dragStart(event)">
+                    Atividade 1
+                </div>
+            </div>
+            <div id="doing" class="column"
+            ondrop="dropIt(event)"
+            ondragover="allowDrop(event)"
+            ondragenter="dragEnter(event)"
+            ondragleave="dragExit(event)">
+                <header class="header">Doing</header>
+                <div id="card2" class="card" draggable="true" ondragstart="dragStart(event)">
+                    Atividade 2
+                </div>
+            </div>
+            <div id="done" class="column"
+             ondrop="dropIt(event)"
+             ondragover="allowDrop(event)"
+             ondragenter="dragEnter(event)"
+             ondragleave="dragExit(event)">
+                <header class="header">Done</header>
+                <div id="card3" class="card" draggable="true" ondragstart="dragStart(event)">
+                    Atividade 3
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="scripts/board.js"></script>
+    <script src="scripts/renderer.js"></script>
+    <script src="scripts/draggable.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
