@@ -6,7 +6,8 @@ Vue.component("board", {
     <div id="board">
     <h1>{{ board.name }}</h1>
     <div id="actions">
-        <button class="btn btn-primary" aria-label="Adicionar tarefa">Nova tarefa</button>
+        <button class="btn btn-primary" aria-label="Adicionar tarefa" onclick="addCard()">+Tarefa</button>
+        <button class="btn btn-primary" aria-label="Adicionar coluna" onclick="addColumn()">+Coluna</button>
         <button class="btn btn-secondary right" aria-label="Excluir">Excluir</button>
     </div>
     <div id="board" class="board-layout">
@@ -42,12 +43,4 @@ Vue.component("card", {
     ondragstart="dragStart(event)">\
     {{ card.title }}\
     </div>'
-})
-
-
-var vm = new Vue({
-    el: "#app-board",
-    data: {
-        board: board
-    }
 })
